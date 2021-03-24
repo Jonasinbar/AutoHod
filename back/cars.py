@@ -37,7 +37,7 @@ class cars:
             self.db.close()
             return "Update The Table"
         except Exception as e:
-            return e:
+            return e
     
     def deleteCar(self, wereList):
         #this function will delete the car from the table
