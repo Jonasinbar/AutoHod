@@ -1,0 +1,16 @@
+  <div class="card">
+        <h4 class="card-header">Welcome to AutoHod!</h4>
+        <div class="card-body">
+            <form name="mtform" onsubmit="return false">
+                <div class="form-group">
+                    <label for="username">Username : </label>
+                    <input #usr type="text"  id="usr" name="usr" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password : </label>
+                    <input #pwd type="password" id="pwd" name="pwd" class="form-control"  />
+                </div>
+                <ion-button type="submit" color="primary" (click)="jonas()">Login</ion-button>
+            </form>
+        </div>
+    </div>

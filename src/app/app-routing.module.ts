@@ -1,11 +1,27 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './folder/login/login.component';
+import { OrderCarComponent } from './folder/OderCar/orderCar.component';
+import { PersonalAreaComponent } from './folder/PersonalArea/PersonalArea.component';
+
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'folder/login',
     pathMatch: 'full'
+  },
+  {
+    path: 'folder/login',
+    component: LoginComponent
+  },
+  {
+    path: 'folder/OrderCar',
+    component: OrderCarComponent
+  },
+  {
+    path: 'folder/PersonalArea',
+    component: PersonalAreaComponent
   },
   {
     path: 'folder/:id',

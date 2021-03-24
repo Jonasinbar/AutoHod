@@ -1,0 +1,26 @@
+form{
+    color: var(--ion-color-primary);
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+  
+h4{
+    color: var(--ion-color-primary);
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    top: 38%;
+    font-size: 30px;
+
+}
+div.formGroup{
+    margin: 1pt;
+}
+ng-component.ion-page {
+    background-color: coral;}
