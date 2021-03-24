@@ -1,0 +1,7 @@
+{
+  "name": "AutoHod",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
