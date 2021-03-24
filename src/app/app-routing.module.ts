@@ -1,34 +1,29 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './folder/login/login.component';
-import { OrderCarComponent } from './folder/OderCar/orderCar.component';
-import { PersonalAreaComponent } from './folder/PersonalArea/PersonalArea.component';
+
 import { RegisterComponent } from './folder/Register/Register.component';
+
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/login',
+    redirectTo: 'login',
     pathMatch: 'full'
-  },
+  },/*{
+    path: '**',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },*/
   {
-    path: 'folder/login',
+    path: 'login',
     component: LoginComponent
   },
   {
-    path: 'folder/OrderCar',
-    component: OrderCarComponent
-  },
-  {
-    path: 'folder/PersonalArea',
-    component: PersonalAreaComponent
-  },
-  {
-    path: 'folder/Register',
+    path: 'Register',
     component: RegisterComponent
-  },
-  {
-    path: 'folder/:id',
+  },{
+    path: 'folder',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   }
 ];
