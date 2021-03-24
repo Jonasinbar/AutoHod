@@ -3,7 +3,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './folder/login/login.component';
 import { OrderCarComponent } from './folder/OderCar/orderCar.component';
 import { PersonalAreaComponent } from './folder/PersonalArea/PersonalArea.component';
-
+import { RegisterComponent } from './folder/Register/Register.component';
 
 const routes: Routes = [
   {
@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: 'folder/PersonalArea',
     component: PersonalAreaComponent
+  },
+  {
+    path: 'folder/Register',
+    component: RegisterComponent
   },
   {
     path: 'folder/:id',

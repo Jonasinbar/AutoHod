@@ -9,6 +9,7 @@ import { FolderPageRoutingModule } from './folder-routing.module';
 import { FolderPage } from './folder.page';
 import { OrderCarComponent } from './OderCar/orderCar.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './Register/Register.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { LoginComponent } from './login/login.component';
   declarations: [
     FolderPage,
     LoginComponent,
-    OrderCarComponent
+    OrderCarComponent,
+    RegisterComponent
   ]
 })
 export class FolderPageModule {}
