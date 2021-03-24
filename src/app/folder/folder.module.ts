@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { FolderPageRoutingModule } from './folder-routing.module';
 
 import { FolderPage } from './folder.page';
-import { OrderCarComponent } from './OderCar/orderCar.component';
+import { OrderCarComponent } from './OrderCar/orderCar.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './Register/Register.component';
 

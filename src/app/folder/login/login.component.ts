@@ -36,9 +36,10 @@ export class LoginComponent implements OnInit {
             {"password": password},
             ];
             jsonOutput = <JSON>obj;
-            console.log(jsonOutput)
+            console.log(jsonOutput);
             const navigationDetails: string[] = ['folder/PersonalArea'];
             this.router.navigate(navigationDetails,{ queryParams: { username: user , pwd : password} });
+            console.log("done");
         }
         
 
