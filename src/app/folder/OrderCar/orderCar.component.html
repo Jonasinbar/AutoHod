@@ -1,14 +1,14 @@
-<html>
+
 <body>
 
 <h1>Show a Date Control</h1>
 
-<form action="/action_page.php">
+<form action="">
   <label for="birthday">Birthday:</label>
-  <input type="date" id="birthday" name="birthday">
-  <input type="submit">
+  <input #dates type="date" id="birthday" name="birthday" id="dates">
+  <input type="submit" (click)="date()">
 </form>
 
-<p><strong>Note:</strong> type="date" is not supported in Safari or Internet Explorer 11 (or earlier).</p>
+<p><strong>Note:</strong> choose the date that you want the car.</p>
 
 </body>

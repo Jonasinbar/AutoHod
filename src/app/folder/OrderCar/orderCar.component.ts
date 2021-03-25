@@ -1,5 +1,8 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+
+
 // import { Router, ActivatedRoute } from '@angular/router';
 // import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 // import { first } from 'rxjs/operators';
@@ -12,39 +15,40 @@ import { Router } from '@angular/router';
 }
     )
 export class OrderCarComponent implements OnInit {
-    @ViewChild('pwd') pwd : ElementRef
-    @ViewChild('usr') usr : ElementRef
 
-    constructor(private router: Router){ }
+    
+    @ViewChild('dates') dates : ElementRef
+
+    constructor(private router: Router, private http: HttpClient){ }
 
 
-    ngOnInit() {
-        console.log(this.usr)
-    }
+    ngOnInit() {}
 
-    jonas() {
-        var user = this.usr.nativeElement.value
-        var password = this.pwd.nativeElement.value
-        if(user=="" || password==""){
-            alert("please provide all the informations")
+    date()
+    {
+        var dates = this.dates.nativeElement.value
+        console.log(dates)
+        if(dates=="")
+        {
+            alert("please choose date")
         }
-        else{
+        else
+        {
             var jsonOutput: JSON;
             var obj: any = 
             [
-            {"userId": user},
-            {"password": password},
+            {"date": dates},
             ];
             jsonOutput = <JSON>obj;
-            console.log(jsonOutput)
-            const navigationDetails: string[] = ['folder/Trash'];
-            this.router.navigate(navigationDetails);
+            this.http.post("/keepACar", jsonOutput).subscribe(data => {
+                console.log(data) 
+            
+            }, err => {
 
+            })
+            console.log(jsonOutput);
 
         }
         
-
-
-
     }
 }

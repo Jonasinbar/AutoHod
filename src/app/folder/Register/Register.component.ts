@@ -26,13 +26,8 @@ export class RegisterComponent implements OnInit {
         
     }
     Register() {
-   
-        console.log('1')
-        var username = this.username.nativeElement.value
-        console.log(username   )
         
-        console.log('1')
-
+        var username = this.username.nativeElement.value
         var personal_id = this.personal_id.nativeElement.value
         var team = this.team.nativeElement.value
         var license_type = this.license_type.nativeElement.value
